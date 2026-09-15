@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>A&S Partners — Conseil financier & stratégique</title>
+  <meta name="description" content="A&S Partners accompagne les entreprises dans leurs décisions financières, leurs projets de financement et leur développement.">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+
+    :root {
+      --navy: #10233b;
+      --navy-dark: #091827;
+      --gold: #b7955b;
+      --cream: #f7f5f0;
+      --white: #ffffff;
+      --text: #263444;
+      --muted: #6d7782;
+      --border: rgba(16,35,59,.13);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(16,35,59,.08);
+    }
+
+    nav {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      letter-spacing: .08em;
+      color: var(--navy);
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 34px;
+      align-items: center;
+      list-style: none;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      transition: .25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-button {
+      padding: 11px 20px;
+      background: var(--navy);
+      color: white !important;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      padding-top: 82px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(7,22,37,.94), rgba(7,22,37,.72)),
+        url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      right: -200px;
+      bottom: -250px;
+      border-radius: 50%;
+      background: rgba(183,149,91,.12);
+    }
+
+    .hero-content {
+      max-width: 800px;
+      color: white;
+      position: relative;
+      z-index: 2;
+      animation: fadeUp 1s ease both;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(48px, 7vw, 86px);
+      font-weight: 500;
+      line-height: 1.04;
+      margin-bottom: 28px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: rgba(255,255,255,.8);
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 38px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 26px;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      background: #a5824b;
+    }
+
+    .button-outline {
+      background: transparent;
+      border-color: rgba(255,255,255,.45);
+    }
+
+    .button-outline:hover {
+      background: white;
+      color: var(--navy);
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 120px 0;
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin-bottom: 70px;
+    }
+
+    .section-label {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1.15;
+      font-weight: 500;
+    }
+
+    .intro {
+      color: var(--muted);
+      font-size: 17px;
+      margin-top: 22px;
+      max-width: 680px;
+    }
+
+    /* CLARTE */
+
+    .clarte {
+      background: var(--cream);
+    }
+
+    .clarte-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 100px;
+      align-items: center;
+    }
+
+    .big-statement {
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.3;
+    }
+
+    .principles {
+      display: grid;
+      gap: 34px;
+    }
+
+    .principle {
+      padding-left: 28px;
+      border-left: 1px solid var(--gold);
+    }
+
+    .principle h3 {
+      color: var(--navy);
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+
+    .principle p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* EXPERTISE */
+
+    .expertises {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+    }
+
+    .expertise {
+      min-height: 310px;
+      padding: 38px;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      transition: .35s;
+      position: relative;
+    }
+
+    .expertise:hover {
+      background: var(--navy);
+      color: white;
+      transform: translateY(-8px);
+    }
+
+    .number {
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: .15em;
+      margin-bottom: 45px;
+    }
+
+    .expertise h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .expertise p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .expertise:hover p {
+      color: rgba(255,255,255,.7);
+    }
+
+    /* CITATION */
+
+    .quote-section {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+    }
+
+    .quote {
+      max-width: 900px;
+      margin: auto;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.25;
+    }
+
+    .quote-line {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin: 30px auto;
+    }
+
+    /* POUR QUI */
+
+    .audience {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+    }
+
+    .audience-card {
+      padding: 55px 50px;
+      border-top: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+    }
+
+    .audience-card:nth-child(even) {
+      border-right: 1px solid var(--border);
+    }
+
+    .audience-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+
+    .audience-card p {
+      color: var(--muted);
+      max-width: 450px;
+    }
+
+    /* METHODE */
+
+    .method {
+      background: var(--cream);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .step {
+      padding: 30px;
+      border-top: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+    }
+
+    .step:last-child {
+      border-right: 1px solid var(--border);
+    }
+
+    .step-number {
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: .15em;
+      margin-bottom: 45px;
+    }
+
+    .step h3 {
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* CTA */
+
+    .cta {
+      background:
+        linear-gradient(90deg, rgba(9,24,39,.96), rgba(9,24,39,.86)),
+        url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      color: white;
+      max-width: 800px;
+      margin: 0 auto 22px;
+    }
+
+    .cta p {
+      color: rgba(255,255,255,.7);
+      max-width: 650px;
+      margin: 0 auto 35px;
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 80px;
+    }
+
+    .contact-info h3 {
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .contact-info p {
+      color: var(--muted);
+    }
+
+    form {
+      display: grid;
+      gap: 18px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      padding: 16px;
+      font: inherit;
+      outline: none;
+      background: #fff;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--gold);
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--navy-dark);
+      color: white;
+      padding: 45px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .footer-logo {
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+    }
+
+    .copyright {
+      color: rgba(255,255,255,.45);
+      font-size: 12px;
+    }
+
+    /* ANIMATION */
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .clarte-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+      }
+
+      .expertises,
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 80px 0;
+      }
+
+      nav {
+        height: 70px;
+      }
+
+      .hero {
+        padding-top: 70px;
+        min-height: 90vh;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .expertises,
+      .audience,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .audience-card {
+        border-right: 1px solid var(--border);
+      }
+
+      .step:last-child {
+        border-right: none;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#accueil" class="logo">
+          A&S <span>Partners</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#expertises">Expertises</a></li>
+          <li><a href="#approche">Notre approche</a></li>
+          <li><a href="#pour-qui">Pour qui ?</a></li>
+          <li>
+            <a href="#contact" class="nav-button">Parlons de votre projet</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <main>
+
+    <section class="hero" id="accueil">
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="eyebrow">Conseil financier & stratégique</div>
+
+          <h1>
+            Structurer vos décisions.<br>
+            Accélérer vos projets.
+          </h1>
+
+          <p>
+            A&S Partners accompagne les entreprises dans leurs décisions
+            financières, leurs projets de financement et leur développement.
+          </p>
+
+          <div class="buttons">
+            <a href="#contact" class="button">
+              Parlons de votre projet
+            </a>
+
+            <a href="#expertises" class="button button-outline">
+              Découvrir nos expertises
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- APPROCHE -->
+
+    <section class="clarte" id="approche">
+      <div class="container">
+
+        <div class="clarte-grid">
+
+          <div class="reveal">
+            <div class="section-label">Notre approche</div>
+
+            <div class="big-statement">
+              Un axe clair pour des décisions solides.
+            </div>
+
+            <p class="intro">
+              Dans un environnement financier et économique en constante
+              évolution, la qualité d'une décision dépend autant de l'analyse
+              que de la manière dont elle est structurée et présentée.
+            </p>
+          </div>
+
+          <div class="principles reveal">
+
+            <div class="principle">
+              <h3>Clarté</h3>
+              <p>
+                Transformer des problématiques complexes en décisions
+                lisibles et structurées.
+              </p>
+            </div>
+
+            <div class="principle">
+              <h3>Rigueur</h3>
+              <p>
+                Appuyer chaque recommandation sur une analyse financière
+                et économique solide.
+              </p>
+            </div>
+
+            <div class="principle">
+              <h3>Engagement</h3>
+              <p>
+                Accompagner chaque client avec une approche personnalisée
+                et orientée résultats.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- EXPERTISES -->
+
+    <section id="expertises">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <div class="section-label">Nos expertises</div>
+          <h2>Une expertise au service de vos décisions.</h2>
+        </div>
+
+        <div class="expertises">
+
+          <article class="expertise reveal">
+            <div class="number">01</div>
+            <h3>Financement & Crédit</h3>
+            <p>
+              Accompagnement des entreprises dans la préparation,
+              la structuration et la présentation de leurs demandes
+              de financement bancaire.
+            </p>
+          </article>
+
+          <article class="expertise reveal">
+            <div class="number">02</div>
+            <h3>Études & Analyse</h3>
+            <p>
+              Analyse de projets, études de faisabilité et évaluation
+              de la viabilité économique des investissements.
+            </p>
+          </article>
+
+          <article class="expertise reveal">
+            <div class="number">03</div>
+            <h3>Business Plans</h3>
+            <p>
+              Élaboration de business plans, modèles financiers et
+              projections permettant de structurer et défendre un projet.
+            </p>
+          </article>
+
+          <article class="expertise reveal">
+            <div class="number">04</div>
+            <h3>Conseil Stratégique</h3>
+            <p>
+              Conseil aux dirigeants dans leurs décisions de développement,
+              de financement et d'investissement.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CITATION -->
+
+    <section class="quote-section">
+      <div class="container">
+
+        <div class="quote reveal">
+          Notre rôle est de donner une structure aux projets,
+          une lecture claire aux chiffres et une direction aux décisions.
+        </div>
+
+        <div class="quote-line"></div>
+
+        <div class="eyebrow">A&S Partners</div>
+
+      </div>
+    </section>
+
+
+    <!-- POUR QUI -->
+
+    <section id="pour-qui">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <div class="section-label">Pour qui ?</div>
+          <h2>Des solutions pensées pour chaque projet.</h2>
+        </div>
+
+        <div class="audience">
+
+          <article class="audience-card reveal">
+            <h3>Entreprises</h3>
+            <p>
+              Structurer leurs besoins de financement et leurs projets
+              de développement pour garantir une croissance durable.
+            </p>
+          </article>
+
+          <article class="audience-card reveal">
+            <h3>Dirigeants</h3>
+            <p>
+              Sécuriser leurs décisions financières et stratégiques
+              pour assurer la pérennité et l'innovation de leurs opérations.
+            </p>
+          </article>
+
+          <article class="audience-card reveal">
+            <h3>Investisseurs</h3>
+            <p>
+              Analyser et évaluer de nouvelles opportunités avec rigueur
+              pour identifier les projets les plus rentables.
+            </p>
+          </article>
+
+          <article class="audience-card reveal">
+            <h3>Porteurs de projets</h3>
+            <p>
+              Transformer une idée en projet structuré et finançable
+              avec une approche pragmatique et institutionnelle.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- METHODE -->
+
+    <section class="method">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <div class="section-label">Notre méthode</div>
+          <h2>Une méthode simple. Une exécution rigoureuse.</h2>
+        </div>
+
+        <div class="steps">
+
+          <article class="step reveal">
+            <div class="step-number">01</div>
+            <h3>Comprendre</h3>
+            <p>
+              Identifier le projet, les objectifs et les enjeux.
+            </p>
+          </article>
+
+          <article class="step reveal">
+            <div class="step-number">02</div>
+            <h3>Analyser</h3>
+            <p>
+              Étudier les données économiques, financières
+              et opérationnelles.
+            </p>
+          </article>
+
+          <article class="step reveal">
+            <div class="step-number">03</div>
+            <h3>Structurer</h3>
+            <p>
+              Construire une stratégie, un dossier et des projections
+              cohérentes.
+            </p>
+          </article>
+
+          <article class="step reveal">
+            <div class="step-number">04</div>
+            <h3>Accompagner</h3>
+            <p>
+              Préparer le client et assurer un accompagnement
+              jusqu'à la mise en œuvre.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+      <div class="container">
+
+        <div class="reveal">
+
+          <div class="section-label">Votre projet</div>
+
+          <h2>
+            Nous structurons vos projets.
+          </h2>
+
+          <p>
+            Échangeons sur vos enjeux et identifions ensemble
+            les leviers les plus pertinents pour votre projet.
+          </p>
+
+          <a href="#contact" class="button">
+            Prendre contact
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+      <div class="container">
+
+        <div class="contact-grid">
+
+          <div class="contact-info reveal">
+
+            <div class="section-label">Contact</div>
+
+            <h3>
+              Vous avez un projet à structurer ?
+            </h3>
+
+            <p>
+              Présentez-nous votre projet et vos enjeux.
+              Nous reviendrons vers vous pour échanger sur
+              les prochaines étapes.
+            </p>
+
+          </div>
+
+          <form
+            class="reveal"
+            action="https://formsubmit.co/VOTRE_EMAIL"
+            method="POST"
+          >
+
+            <input
+              type="hidden"
+              name="_subject"
+              value="Nouveau contact — A&S Partners"
+            >
+
+            <input
+              type="hidden"
+              name="_captcha"
+              value="false"
+            >
+
+            <input
+              type="hidden"
+              name="_template"
+              value="table"
+            >
+
+            <input
+              type="text"
+              name="nom"
+              placeholder="Votre nom"
+              required
+            >
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Votre adresse email"
+              required
+            >
+
+            <input
+              type="text"
+              name="entreprise"
+              placeholder="Entreprise"
+            >
+
+            <textarea
+              name="message"
+              placeholder="Parlez-nous de votre projet..."
+              required
+            ></textarea>
+
+            <button class="button" type="submit">
+              Envoyer ma demande
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container">
+
+      <div class="footer-inner">
+
+        <div class="footer-logo">
+          A&S <span style="color:#b7955b;">Partners</span>
+        </div>
+
+        <div class="copyright">
+          © 2026 A&S Partners. Tous droits réservés.
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ANIMATIONS -->
+
+  <script>
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+    document.querySelectorAll(".reveal").forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
