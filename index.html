@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A&amp;S Partners</title>
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
 
 :root{
@@ -39,7 +46,6 @@ img{max-width:100%;display:block;}
   padding:0 40px;
 }
 
-/* Header */
 header.site{
   position:sticky;
   top:0;
@@ -77,35 +83,19 @@ header.site{
 .nav-links a:hover{color:var(--bronze);}
 .nav-links a.active{border-bottom:1px solid var(--bronze);}
 
-/* Hero */
-.hero{
-  padding:90px 0 70px;
-}
+.hero{padding:90px 0 70px;}
 .hero-grid{
   display:grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap:64px;
   align-items:center;
 }
-.hero h1{
-  font-size:clamp(34px, 4.2vw, 54px);
-  max-width:12ch;
-}
-.hero p{
-  font-size:18px;
-  color:var(--slate);
-  max-width:46ch;
-  margin:22px 0 32px;
-}
+.hero h1{font-size:clamp(34px, 4.2vw, 54px);max-width:12ch;}
+.hero p{font-size:18px;color:var(--slate);max-width:46ch;margin:22px 0 32px;}
 .hero-actions{display:flex;gap:18px;flex-wrap:wrap;}
-.hero-image{
-  border-radius:2px;
-  overflow:hidden;
-  aspect-ratio: 4/3.4;
-}
+.hero-image{border-radius:2px;overflow:hidden;aspect-ratio: 4/3.4;}
 .hero-image img{width:100%;height:100%;object-fit:cover;}
 
-/* Buttons */
 .btn{
   display:inline-block;
   padding:13px 26px;
@@ -114,22 +104,12 @@ header.site{
   border:1px solid var(--navy);
   transition: background .2s, color .2s, border-color .2s;
 }
-.btn-primary{
-  background:var(--navy);
-  color:var(--cream);
-}
+.btn-primary{background:var(--navy);color:var(--cream);}
 .btn-primary:hover{background:var(--bronze);border-color:var(--bronze);}
-.btn-secondary{
-  background:transparent;
-  color:var(--navy);
-}
+.btn-secondary{background:transparent;color:var(--navy);}
 .btn-secondary:hover{border-color:var(--bronze);color:var(--bronze);}
 
-/* Sections generic */
-section{
-  padding:70px 0;
-  border-top:1px solid var(--line);
-}
+section{padding:70px 0;border-top:1px solid var(--line);}
 section.no-line{border-top:none;}
 
 .section-head{
@@ -139,16 +119,9 @@ section.no-line{border-top:none;}
   align-items:start;
   margin-bottom:46px;
 }
-.section-head h2{
-  font-size:clamp(26px,3vw,36px);
-  max-width:14ch;
-}
-.section-head .support{
-  color:var(--slate);
-  font-size:16px;
-}
+.section-head h2{font-size:clamp(26px,3vw,36px);max-width:14ch;}
+.section-head .support{color:var(--slate);font-size:16px;}
 
-/* Intro (axe clair) */
 .intro-grid{
   display:grid;
   grid-template-columns: 0.85fr 1.15fr;
@@ -157,38 +130,18 @@ section.no-line{border-top:none;}
 }
 .intro-image{aspect-ratio:1/1;overflow:hidden;}
 .intro-image img{width:100%;height:100%;object-fit:cover;}
-.intro-text p.lead{
-  font-size:19px;
-  color:var(--slate);
-  max-width:52ch;
-  margin-bottom:40px;
-}
-.pillars{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:32px;
-}
-.pillar h4{
-  font-size:18px;
-  margin-bottom:8px;
-}
-.pillar p{
-  color:var(--slate);
-  font-size:15px;
-  margin:0;
-}
+.intro-text p.lead{font-size:19px;color:var(--slate);max-width:52ch;margin-bottom:40px;}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+.pillar h4{font-size:18px;margin-bottom:8px;}
+.pillar p{color:var(--slate);font-size:15px;margin:0;}
 
-/* Expertises grid */
 .expertise-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:0;
   border:1px solid var(--line);
 }
-.expertise-card{
-  padding:32px 28px;
-  border-right:1px solid var(--line);
-}
+.expertise-card{padding:32px 28px;border-right:1px solid var(--line);}
 .expertise-card:last-child{border-right:none;}
 .expertise-card h4{font-size:18px;margin-bottom:12px;}
 .expertise-card p{color:var(--slate);font-size:14.5px;margin:0;}
@@ -201,99 +154,42 @@ section.no-line{border-top:none;}
   border:1px solid var(--line);
 }
 .expertise-banner img{width:100%;height:100%;object-fit:cover;}
-.expertise-banner .caption{
-  background:var(--navy);
-  color:var(--cream);
-  padding:40px;
-  display:flex;
-  align-items:center;
-}
-.expertise-banner .caption p{
-  font-family:'Fraunces', serif;
-  font-size:22px;
-  line-height:1.3;
-  margin:0;
-}
+.expertise-banner .caption{background:var(--navy);color:var(--cream);padding:40px;display:flex;align-items:center;}
+.expertise-banner .caption p{font-family:'Fraunces', serif;font-size:22px;line-height:1.3;margin:0;}
 
-/* Direction (plus qu'une analyse) */
-.direction-head{
-  text-align:left;
-  max-width:640px;
-  margin-bottom:44px;
-}
-.direction-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:24px;
-}
+.direction-head{text-align:left;max-width:640px;margin-bottom:44px;}
+.direction-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
 .direction-item{position:relative;}
-.direction-item .img-box{
-  aspect-ratio:1/1;
-  overflow:hidden;
-  margin-bottom:14px;
-}
+.direction-item .img-box{aspect-ratio:1/1;overflow:hidden;margin-bottom:14px;}
 .direction-item img{width:100%;height:100%;object-fit:cover;}
-.direction-item span{
-  font-size:15px;
-  color:var(--slate);
-}
+.direction-item span{font-size:15px;color:var(--slate);}
 
-/* Pour qui */
 .audience-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:0;
   border-top:1px solid var(--line);
 }
-.audience-item{
-  padding:34px 26px;
-  border-right:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
+.audience-item{padding:34px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);}
 .audience-item:last-child{border-right:none;}
 .audience-item h3{font-size:19px;margin-bottom:10px;}
 .audience-item p{color:var(--slate);font-size:14.5px;margin:0;}
 
-/* Process steps */
-.process-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:32px;
-}
-.process-step .num{
-  font-family:'Fraunces', serif;
-  font-size:15px;
-  color:var(--bronze);
-  margin-bottom:14px;
-  display:block;
-}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;}
+.process-step .num{font-family:'Fraunces', serif;font-size:15px;color:var(--bronze);margin-bottom:14px;display:block;}
 .process-step h4{font-size:17px;margin-bottom:8px;}
 .process-step p{color:var(--slate);font-size:14.5px;margin:0;}
 
-/* CTA band */
-.cta-band{
-  background:var(--navy);
-  color:var(--cream);
-  padding:70px 0;
-  text-align:left;
-}
+.cta-band{background:var(--navy);color:var(--cream);padding:70px 0;text-align:left;}
 .cta-band h2{color:var(--cream);max-width:18ch;}
 .cta-band p{color:#C9CFDA;max-width:48ch;margin:18px 0 30px;}
 .cta-band .btn-primary{background:var(--bronze);border-color:var(--bronze);}
 .cta-band .btn-primary:hover{background:var(--cream);color:var(--navy);}
 
-.final-question{
-  padding:80px 0;
-  text-align:left;
-}
+.final-question{padding:80px 0;text-align:left;}
 .final-question h2{font-size:clamp(28px,3.4vw,42px);max-width:16ch;}
 
-/* Footer */
-footer.site{
-  background:var(--navy);
-  color:#C9CFDA;
-  padding:50px 0 28px;
-}
+footer.site{background:var(--navy);color:#C9CFDA;padding:50px 0 28px;}
 .footer-top{
   display:flex;
   justify-content:space-between;
@@ -302,86 +198,40 @@ footer.site{
   border-bottom:1px solid rgba(255,255,255,0.12);
   margin-bottom:22px;
 }
-.footer-brand{
-  font-family:'Fraunces', serif;
-  color:var(--cream);
-  font-size:19px;
-}
+.footer-brand{font-family:'Fraunces', serif;color:var(--cream);font-size:19px;}
 .footer-social{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-size:14px;}
 .footer-social a:hover{color:var(--bronze);}
 .footer-bottom{font-size:13px;color:#8994A6;}
 
-/* Expertise page specific two-col rows */
-.feature-row{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:64px;
-  align-items:center;
-}
+.feature-row{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
 .feature-row.reverse .feature-media{order:2;}
 .feature-media{aspect-ratio:4/3.4;overflow:hidden;}
 .feature-media img{width:100%;height:100%;object-fit:cover;}
-.feature-text ul{
-  margin:22px 0 30px;
-  padding:0;
-  list-style:none;
-}
-.feature-text ul li{
-  padding:12px 0;
-  border-top:1px solid var(--line);
-  color:var(--slate);
-  font-size:15px;
-}
+.feature-text ul{margin:22px 0 30px;padding:0;list-style:none;}
+.feature-text ul li{padding:12px 0;border-top:1px solid var(--line);color:var(--slate);font-size:15px;}
 .feature-text ul li:last-child{border-bottom:1px solid var(--line);}
 .feature-text p.lead{color:var(--slate);font-size:16.5px;margin:14px 0 26px;}
 
-.sub-cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:28px;
-  margin:36px 0 30px;
-}
+.sub-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:36px 0 30px;}
 .sub-card{border-top:2px solid var(--bronze);padding-top:16px;}
 .sub-card h5{font-size:16px;margin:0 0 8px;}
 .sub-card p{color:var(--slate);font-size:14.5px;margin:0;}
 
-.bp-block{
-  text-align:left;
-  max-width:640px;
-}
+.bp-block{text-align:left;max-width:640px;}
+.strategy-block{text-align:left;max-width:640px;margin:0 auto;}
 
-.strategy-block{
-  text-align:left;
-  max-width:640px;
-  margin:0 auto;
-}
+.about-block{max-width:640px;}
+.about-block p{color:var(--slate);}
 
-/* Contact page */
-.contact-grid{
-  display:grid;
-  grid-template-columns:0.8fr 1.2fr;
-  gap:70px;
-}
+.contact-grid{display:grid;grid-template-columns:0.8fr 1.2fr;gap:70px;}
 .contact-info h3{font-size:24px;margin-bottom:30px;}
 .info-block{margin-bottom:26px;}
-.info-block h6{
-  font-family:'Inter';
-  font-weight:600;
-  font-size:13px;
-  letter-spacing:0.03em;
-  color:var(--bronze);
-  margin:0 0 6px;
-}
+.info-block h6{font-family:'Inter';font-weight:600;font-size:13px;letter-spacing:0.03em;color:var(--bronze);margin:0 0 6px;}
 .info-block p{margin:0;color:var(--slate);}
 
 form.contact-form{display:grid;gap:18px;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-.field label{
-  display:block;
-  font-size:13px;
-  color:var(--slate);
-  margin-bottom:6px;
-}
+.field label{display:block;font-size:13px;color:var(--slate);margin-bottom:6px;}
 .field input, .field select, .field textarea{
   width:100%;
   border:1px solid var(--line);
@@ -392,34 +242,288 @@ form.contact-form{display:grid;gap:18px;}
   color:var(--navy);
 }
 .field textarea{min-height:130px;resize:vertical;}
-.field input:focus, .field select:focus, .field textarea:focus{
-  outline:2px solid var(--bronze);
-  outline-offset:1px;
-}
+.field input:focus, .field select:focus, .field textarea:focus{outline:2px solid var(--bronze);outline-offset:1px;}
 .radio-group{display:flex;gap:24px;flex-wrap:wrap;}
 .radio-group label{display:flex;align-items:center;gap:8px;font-size:14.5px;color:var(--navy);}
+
+.page-title{padding-top:60px;padding-bottom:20px;}
+.page-title h1{font-size:clamp(30px,3.6vw,44px);max-width:18ch;}
 
 @media (max-width:900px){
   .wrap{padding:0 22px;}
   .nav-bar{padding:18px 22px;flex-direction:column;gap:14px;}
   .nav-links{gap:22px;flex-wrap:wrap;justify-content:center;}
-  .hero-grid, .intro-grid, .feature-row, .contact-grid, .expertise-banner{
-    grid-template-columns:1fr;
-  }
+  .hero-grid, .intro-grid, .feature-row, .contact-grid, .expertise-banner{grid-template-columns:1fr;}
   .feature-row.reverse .feature-media{order:0;}
-  .pillars, .direction-grid, .audience-grid, .process-grid, .sub-cards, .expertise-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+  .pillars, .direction-grid, .audience-grid, .process-grid, .sub-cards, .expertise-grid{grid-template-columns:repeat(2,1fr);}
   .expertise-card{border-right:none;border-bottom:1px solid var(--line);}
-  .expertise-card:nth-child(2n){border-right:none;}
   .audience-item:nth-child(2n){border-right:none;}
   .section-head{grid-template-columns:1fr;gap:18px;}
   .form-row{grid-template-columns:1fr;}
   .footer-top{flex-direction:column;gap:18px;text-align:center;}
 }
 @media (max-width:560px){
-  .pillars, .direction-grid, .audience-grid, .process-grid, .sub-cards, .expertise-grid{
-    grid-template-columns:1fr;
-  }
+  .pillars, .direction-grid, .audience-grid, .process-grid, .sub-cards, .expertise-grid{grid-template-columns:1fr;}
   .expertise-card{border-right:none !important;}
 }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav-bar">
+    <a class="brand" href="#accueil">A&amp;S Partners</a>
+    <ul class="nav-links">
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#a-propos">À propos</a></li>
+      <li><a href="#expertises">Expertises</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===================== ACCUEIL ===================== -->
+<div id="accueil">
+
+<section class="hero no-line">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Structurer vos décisions. Accélérer vos projets.</h1>
+      <p>A&amp;S Partners accompagne les entreprises dans leurs décisions financières, leurs projets de financement et leur développement.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Parlons de votre projet</a>
+        <a href="#expertises" class="btn btn-secondary">Découvrir nos expertises</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://static.wixstatic.com/media/4171c3_bcf745863a554219bfc2d2c94829679a~mv2.jpg" alt="A&amp;S Partners">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap intro-grid">
+    <div class="intro-image">
+      <img src="https://static.wixstatic.com/media/4171c3_b8b560648aa94bc0a104cd0ed6eab4ea~mv2.png" alt="Analyse financière">
+    </div>
+    <div class="intro-text">
+      <h2>Un axe clair pour des décisions solides.</h2>
+      <p class="lead">Dans un environnement financier et économique en constante évolution, la qualité d'une décision dépend autant de l'analyse que de la manière dont elle est structurée et présentée.</p>
+      <div class="pillars">
+        <div class="pillar"><h4>Clarté</h4><p>Transformer des problématiques complexes en décisions lisibles et structurées.</p></div>
+        <div class="pillar"><h4>Rigueur</h4><p>Appuyer chaque recommandation sur une analyse financière et économique solide.</p></div>
+        <div class="pillar"><h4>Engagement</h4><p>Accompagner chaque client avec une approche personnalisée et orientée résultats.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head"><h2>Nos Expertises</h2></div>
+    <div class="expertise-grid">
+      <div class="expertise-card"><h4>Financement &amp; Crédit</h4><p>Accompagnement des entreprises dans la préparation, la structuration et la présentation de leurs demandes de financement bancaire.</p></div>
+      <div class="expertise-card"><h4>Études &amp; Analyse</h4><p>Analyse de projets, études de faisabilité et évaluation de la viabilité économique des investissements.</p></div>
+      <div class="expertise-card"><h4>Business Plans</h4><p>Élaboration de business plans, modèles financiers et projections permettant de structurer et défendre un projet.</p></div>
+      <div class="expertise-card"><h4>Conseil Stratégique</h4><p>Conseil aux dirigeants dans leurs décisions de développement, de financement et d'investissement.</p></div>
+    </div>
+    <div class="expertise-banner">
+      <img src="https://static.wixstatic.com/media/4171c3_47d31df257ef4bfb93162ea49d54565b~mv2.jpg" alt="A&amp;S Partners">
+      <div class="caption"><p>Notre rôle est de donner une structure aux projets, une lecture claire aux chiffres et une direction aux décisions.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="direction-head"><h2>Plus qu'une analyse. Une direction.</h2></div>
+    <div class="direction-grid">
+      <div class="direction-item"><div class="img-box"><img src="https://static.wixstatic.com/media/4171c3_5fea7b6f46cc466a8abeb465f44c5c19~mv2.jpg" alt="Approche indépendante"></div><span>Approche indépendante</span></div>
+      <div class="direction-item"><div class="img-box"><img src="https://static.wixstatic.com/media/4171c3_f1144e970e874e91bb87f2c884f35734~mv2.jpg" alt="Analyse sur mesure"></div><span>Analyse sur mesure</span></div>
+      <div class="direction-item"><div class="img-box"><img src="https://static.wixstatic.com/media/4171c3_93e3e24e2df84aedb3f24ff21b7f06e1~mv2.jpg" alt="Culture financière"></div><span>Culture financière</span></div>
+      <div class="direction-item"><div class="img-box"><img src="https://static.wixstatic.com/media/4171c3_d0aec7230b3d48c4bca1e85fce8893df~mv2.jpg" alt="Vision orientée projet"></div><span>Vision orientée projet</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="no-line">
+  <div class="wrap"><div class="section-head"><h2>Pour qui ?</h2></div></div>
+  <div class="wrap" style="padding:0;">
+    <div class="audience-grid">
+      <div class="audience-item"><h3>Entreprises</h3><p>Structurer leurs besoins de financement et leurs projets de développement pour garantir une croissance durable.</p></div>
+      <div class="audience-item"><h3>Dirigeants</h3><p>Sécuriser leurs décisions financières et stratégiques pour assurer la pérennité et l'innovation de leurs opérations.</p></div>
+      <div class="audience-item"><h3>Investisseurs</h3><p>Analyser et évaluer de nouvelles opportunités avec rigueur pour identifier les projets les plus rentables.</p></div>
+      <div class="audience-item"><h3>Porteurs de projets</h3><p>Transformer une idée en projet structuré et finançable avec une approche pragmatique et institutionnelle.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap process-grid">
+    <div class="process-step"><span class="num">01</span><h4>Comprendre</h4><p>Identifier le projet, les objectifs et les enjeux.</p></div>
+    <div class="process-step"><span class="num">02</span><h4>Analyser</h4><p>Étudier les données économiques, financières et opérationnelles.</p></div>
+    <div class="process-step"><span class="num">03</span><h4>Structurer</h4><p>Construire une stratégie, un dossier et des projections cohérentes.</p></div>
+    <div class="process-step"><span class="num">04</span><h4>Accompagner</h4><p>Préparer le client et assurer un accompagnement jusqu'à la mise en œuvre.</p></div>
+  </div>
+</section>
+
+<section class="cta-band" style="border-top:none;">
+  <div class="wrap">
+    <h2>Nous structurons vos projets</h2>
+    <p>Échangeons sur vos enjeux et identifions ensemble les leviers les plus pertinents pour votre projet.</p>
+    <a href="#contact" class="btn btn-primary">Prendre contact</a>
+  </div>
+</section>
+
+<section class="final-question">
+  <div class="wrap"><h2>Vous avez un projet à structurer ?</h2></div>
+</section>
+
+</div>
+<!-- ===================== FIN ACCUEIL ===================== -->
+
+
+<!-- ===================== A PROPOS ===================== -->
+<div id="a-propos">
+<section class="no-line page-title">
+  <div class="wrap">
+    <h1>À propos</h1>
+    <div class="about-block" style="margin-top:20px;">
+      <p>Cette section n'a pas pu être récupérée automatiquement (le site Wix a renvoyé une erreur au moment de l'extraction). Envoyez-moi le texte d'origine de votre page « À propos » et je le remets ici, à l'identique, avec la même mise en page que le reste du site.</p>
+    </div>
+  </div>
+</section>
+</div>
+<!-- ===================== FIN A PROPOS ===================== -->
+
+
+<!-- ===================== EXPERTISES ===================== -->
+<div id="expertises">
+
+<section class="no-line page-title">
+  <div class="wrap"><h1>Nos Expertises</h1></div>
+</section>
+
+<section class="no-line">
+  <div class="wrap feature-row">
+    <div class="feature-text">
+      <h2>Financement &amp; Crédit</h2>
+      <p class="lead">Nous structurons vos dossiers de financement bancaire pour garantir une présentation solide et cohérente, optimisant ainsi vos chances de succès auprès des institutions financières.</p>
+      <ul>
+        <li>Accompagnement stratégique dans la préparation et la structuration des dossiers de financement.</li>
+        <li>Montage et structuration de demandes de crédit auprès des banques et institutions financières.</li>
+        <li>Études économiques et financières pour l'analyse de projets et l'évaluation de viabilité.</li>
+        <li>Conseil personnalisé pour sécuriser vos décisions financières et stratégiques.</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Demander une étude</a>
+    </div>
+    <div class="feature-media"><img src="https://static.wixstatic.com/media/4171c3_30868fccf3374eeeb67549e904e384bc~mv2.jpg" alt="Financement &amp; Crédit"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap feature-row reverse">
+    <div class="feature-text">
+      <h2>Études &amp; Analyses</h2>
+      <p class="lead">Nous structurons votre projet financier avec une rigueur absolue. Nos analyses économiques et financières permettent d'évaluer la viabilité de vos investissements et de sécuriser vos décisions stratégiques.</p>
+      <div class="sub-cards">
+        <div class="sub-card"><h5>Études de faisabilité</h5><p>Évaluation approfondie des risques opérationnels et financiers.</p></div>
+        <div class="sub-card"><h5>Analyses financières</h5><p>Modélisation financière et projections de trésorerie précises.</p></div>
+        <div class="sub-card"><h5>Évaluation de projets</h5><p>Conseil stratégique sur l'investissement et la rentabilité.</p></div>
+      </div>
+      <a href="#contact" class="btn btn-primary">Démarrer une analyse</a>
+    </div>
+    <div class="feature-media"><img src="https://static.wixstatic.com/media/4171c3_ac9348a059a343f1915fd717f3ff7eb5~mv2.png" alt="Études &amp; Analyses"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap feature-row">
+    <div class="feature-text bp-block">
+      <h2>Business Plans &amp; Prévisionnels</h2>
+      <p class="lead">Nous structurons vos projets en modèles financiers rigoureux et cohérents. Nos prévisions de trésorerie et projections permettent de sécuriser vos décisions stratégiques et de défendre votre projet auprès des institutions financières.</p>
+      <a href="#contact" class="btn btn-primary">Concevoir mon BP</a>
+    </div>
+    <div class="feature-media"><img src="https://static.wixstatic.com/media/4171c3_14884b4744134c718008115982cfb268~mv2.jpg" alt="Business Plans &amp; Prévisionnels"></div>
+  </div>
+</section>
+
+<section class="cta-band" style="text-align:left;">
+  <div class="wrap">
+    <img src="https://static.wixstatic.com/media/4171c3_2e1eadc0e32542ba960728da3dd997d2~mv2.jpg" alt="Accompagnement stratégique" style="width:100%;max-height:260px;object-fit:cover;margin-bottom:36px;">
+    <div class="strategy-block">
+      <h2>Accompagnement stratégique</h2>
+      <p>Nous structurons vos décisions financières et vos projets d'investissement avec une rigueur absolue et une clarté institutionnelle.</p>
+      <a href="#contact" class="btn btn-primary">Prendre contact</a>
+    </div>
+  </div>
+</section>
+
+</div>
+<!-- ===================== FIN EXPERTISES ===================== -->
+
+
+<!-- ===================== CONTACT ===================== -->
+<div id="contact">
+
+<section class="no-line page-title">
+  <div class="wrap">
+    <h1>Contactez nous</h1>
+    <div class="contact-grid" style="margin-top:50px;">
+      <div class="contact-info">
+        <div class="info-block"><h6>Localisation</h6><p>Béjaia, Algérie</p></div>
+        <div class="info-block"><h6>Email</h6><p>contact@aspartners.test</p></div>
+        <div class="info-block"><h6>Téléphone</h6><p>+213 21 00 00 00</p></div>
+      </div>
+
+      <form class="contact-form" onsubmit="return false;">
+        <div class="form-row">
+          <div class="field"><label for="nom">Nom*</label><input type="text" id="nom" required></div>
+          <div class="field"><label for="prenom">Prénom*</label><input type="text" id="prenom" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="societe">Société*</label><input type="text" id="societe" required></div>
+          <div class="field"><label for="fonction">Fonction*</label><input type="text" id="fonction" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="email">Email*</label><input type="email" id="email" required></div>
+          <div class="field"><label for="tel">Téléphone</label><input type="tel" id="tel"></div>
+        </div>
+        <div class="field">
+          <label>Type de projet*</label>
+          <div class="radio-group">
+            <label><input type="radio" name="projet" value="Financement" checked> Financement</label>
+            <label><input type="radio" name="projet" value="Études"> Études</label>
+            <label><input type="radio" name="projet" value="Business Plan"> Business Plan</label>
+          </div>
+        </div>
+        <div class="field"><label for="message">Message*</label><textarea id="message" required></textarea></div>
+        <button type="submit" class="btn btn-primary" style="justify-self:start;">Envoyer</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</div>
+<!-- ===================== FIN CONTACT ===================== -->
+
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="#accueil">A&amp;S Partners</a>
+      <ul class="footer-social">
+        <li><a href="http://www.facebook.com">Facebook</a></li>
+        <li><a href="http://www.instagram.com">Instagram</a></li>
+        <li><a href="http://www.youtube.com">YouTube</a></li>
+        <li><a href="http://www.x.com">X</a></li>
+        <li><a href="http://www.linkedin.com">LinkedIn</a></li>
+        <li><a href="http://www.tiktok.com">TikTok</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">© 2026 A&amp;S Partners. Tous droits réservés.</div>
+  </div>
+</footer>
+
+</body>
+</html>
