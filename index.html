@@ -19,9 +19,9 @@
   --text:#F5F3EF;
   --muted:#918F97;
   --muted-2:#5E5C64;
-  --past:#D8B685;        /* warm amber — memories, opened capsules */
+  --past:#D8B685;
   --past-soft:rgba(216,182,133,.16);
-  --future:#8C99E8;      /* cool indigo — locked, what's ahead */
+  --future:#8C99E8;
   --future-soft:rgba(140,153,232,.16);
   --danger:#E38B8B;
   --ff-serif:'Fraunces',serif;
@@ -33,7 +33,6 @@ body{-webkit-font-smoothing:antialiased;}
 button,input,textarea{font-family:inherit;}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.001ms !important;transition-duration:.001ms !important;}}
 
-/* ---------- ambient background ---------- */
 #bgcanvas{position:fixed;inset:0;z-index:0;pointer-events:none;}
 .nebula{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
 .nebula span{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;mix-blend-mode:screen;}
@@ -46,7 +45,6 @@ button,input,textarea{font-family:inherit;}
 .screen{flex:1;display:flex;flex-direction:column;padding:28px 24px calc(28px + env(safe-area-inset-bottom));animation:enter .5s cubic-bezier(.2,.8,.2,1);}
 @keyframes enter{from{opacity:0;transform:translateY(10px) scale(.99);filter:blur(4px)}to{opacity:1;transform:none;filter:blur(0)}}
 
-/* type */
 .serif{font-family:var(--ff-serif);}
 h1.brand{font-family:var(--ff-serif);font-weight:400;font-size:2.3rem;letter-spacing:.01em;margin:0;
   background:linear-gradient(100deg,var(--past),#F5EFE3 35%,var(--future) 70%,var(--past));
@@ -59,7 +57,6 @@ p{line-height:1.55;}
 .muted{color:var(--muted);}
 .center{text-align:center;}
 
-/* buttons */
 .btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px 20px;border-radius:16px;border:none;font-size:1rem;font-weight:500;cursor:pointer;transition:transform .15s ease, box-shadow .3s ease;}
 .btn:active{transform:scale(.96);}
 .btn-primary{background:linear-gradient(135deg,#E4C594,var(--past));color:#171009;box-shadow:0 4px 24px rgba(216,182,133,.22);}
@@ -71,15 +68,12 @@ p{line-height:1.55;}
 .btn-danger{background:transparent;color:var(--danger);border:1px solid rgba(227,139,139,.35);}
 .btn-row{display:flex;gap:10px;}
 
-/* top bar */
 .topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;}
 .iconbtn{width:38px;height:38px;border-radius:50%;background:var(--surface);border:1px solid var(--line);color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.05rem;backdrop-filter:blur(16px);transition:transform .15s;}
 .iconbtn:active{transform:scale(.9);}
 
-/* glass surface */
 .glass{background:var(--surface);border:1px solid var(--line);backdrop-filter:blur(20px);border-radius:20px;}
 
-/* home */
 .home-hero{margin:14px 0 28px;}
 .section-title{font-size:.8rem;letter-spacing:.04em;color:var(--muted-2);margin:30px 0 12px;}
 .capsule-row{display:flex;align-items:center;gap:14px;padding:15px;margin-bottom:10px;border-radius:18px;cursor:pointer;background:var(--surface);border:1px solid var(--line);backdrop-filter:blur(16px);transition:transform .15s,border-color .2s;}
@@ -95,7 +89,6 @@ p{line-height:1.55;}
 .chev{color:var(--muted-2);}
 .empty{color:var(--muted);font-size:.9rem;padding:20px 4px;font-style:italic;font-family:var(--ff-serif);}
 
-/* create flow */
 .type-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px;}
 .type-card{background:var(--surface);border:1px solid var(--line);backdrop-filter:blur(16px);border-radius:18px;padding:26px 14px;text-align:center;cursor:pointer;transition:border-color .2s,transform .15s;}
 .type-card:active{transform:scale(.96);}
@@ -115,7 +108,6 @@ textarea.textcapture:focus{outline:none;border-color:var(--future);}
 .capbtn::after{content:'';position:absolute;inset:6px;border-radius:50%;background:var(--danger);transition:.2s;}
 .capbtn.recording::after{border-radius:6px;inset:20px;}
 
-/* date choices */
 .chiprow{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
 .chip{padding:12px 18px;border-radius:30px;border:1px solid var(--line);background:var(--surface);backdrop-filter:blur(16px);cursor:pointer;font-size:.92rem;transition:.2s;}
 .chip.selected{background:var(--future-soft);border-color:var(--future);color:#C7CFF7;}
@@ -125,12 +117,10 @@ input:focus{outline:none;border-color:var(--future);}
 label.field-label{font-size:.85rem;color:var(--muted);margin:22px 0 8px;display:block;}
 .field-error{color:var(--danger);font-size:.82rem;margin-top:8px;min-height:1.1em;}
 
-/* lock animation */
 .lock-scene{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;text-align:center;}
 .orb-big{width:120px;height:120px;border-radius:50%;border:2px solid var(--future);position:relative;display:flex;align-items:center;justify-content:center;font-size:2.2rem;animation:seal 1.1s ease forwards;background:radial-gradient(circle,var(--future-soft),transparent 70%);}
 @keyframes seal{0%{transform:scale(1.35);opacity:.2}55%{transform:scale(.92);box-shadow:0 0 50px rgba(140,153,232,.4)}100%{transform:scale(1);box-shadow:0 0 22px rgba(140,153,232,.22)}}
 
-/* opening */
 .open-scene{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;animation:enter .7s ease;position:relative;}
 .open-scene .kicker{font-family:var(--ff-serif);font-style:italic;color:var(--muted);font-size:1.1rem;}
 .open-scene .kicker2{font-family:var(--ff-serif);font-size:1.55rem;margin-top:4px;}
@@ -143,7 +133,6 @@ img.immersive{width:100%;border-radius:18px;display:block;}
 .question-block .qlabel{color:var(--muted-2);font-size:.78rem;margin-bottom:8px;letter-spacing:.03em;}
 .question-block .qtext{font-family:var(--ff-serif);font-size:1.1rem;font-style:italic;}
 
-/* profile */
 .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px;}
 .stat-box{background:var(--surface);border:1px solid var(--line);backdrop-filter:blur(16px);border-radius:16px;padding:18px;}
 .stat-num{font-family:var(--ff-serif);font-size:1.7rem;}
@@ -157,7 +146,6 @@ img.immersive{width:100%;border-radius:18px;display:block;}
 .tl-label{font-size:.9rem;}
 .tl-date{color:var(--muted);font-size:.78rem;margin-top:2px;}
 
-/* onboarding / auth */
 .ob-slide{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;}
 .ob-dots{display:flex;gap:8px;justify-content:center;margin:24px 0;}
 .ob-dot{width:6px;height:6px;border-radius:50%;background:var(--line);}
@@ -166,7 +154,6 @@ img.immersive{width:100%;border-radius:18px;display:block;}
 .auth-orb::after{content:'🕰️';font-size:1.6rem;background:var(--bg);width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* share card */
 .sharecard{aspect-ratio:4/5;width:100%;border-radius:22px;background:linear-gradient(160deg,#171310,#08070C 60%);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:30px;position:relative;overflow:hidden;}
 .sharecard::before{content:'';position:absolute;width:220px;height:220px;background:radial-gradient(circle,var(--future-soft),transparent 70%);top:-60px;right:-60px;}
 .sharecard .sc-orb{font-size:2rem;}
@@ -178,7 +165,43 @@ img.immersive{width:100%;border-radius:18px;display:block;}
 .spacer{flex:1;}
 .small-note{font-size:.78rem;color:var(--muted-2);margin-top:10px;line-height:1.5;}
 
-/* modal (replaces native confirm/alert, which browsers may block in embedded frames) */
+.orbit-wrap{display:flex;justify-content:center;margin:6px 0 8px;}
+.orbit-system{position:relative;width:264px;height:264px;}
+.orbit-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;
+  background:radial-gradient(circle,rgba(245,243,239,.14),rgba(245,243,239,.02));border:1px solid var(--line);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:.62rem;color:var(--muted);
+  letter-spacing:.03em;z-index:5;cursor:pointer;animation:centerpulse 4s ease-in-out infinite;}
+.orbit-center b{font-family:var(--ff-serif);font-size:.82rem;color:var(--text);font-weight:400;display:block;}
+@keyframes centerpulse{0%,100%{box-shadow:0 0 0 0 rgba(245,243,239,.08)}50%{box-shadow:0 0 0 10px rgba(245,243,239,0)}}
+.orbit-ring{position:absolute;inset:0;animation:spin linear infinite;}
+.orbit-ring.reverse{animation-direction:reverse;}
+.orbit-track{position:absolute;top:50%;left:50%;width:1px;height:1px;border-radius:50%;}
+.orbit-track::before{content:'';position:absolute;border:1px dashed rgba(255,255,255,.06);border-radius:50%;}
+.orbit-dot{position:absolute;top:50%;left:50%;width:26px;height:26px;margin:-13px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:.85rem;cursor:pointer;background:var(--future-soft);border:1px solid rgba(140,153,232,.45);}
+.orbit-dot.star{background:var(--past-soft);border:1px solid rgba(216,182,133,.4);width:16px;height:16px;margin:-8px;font-size:.55rem;}
+.orbit-dot .oicon{animation:spin linear infinite reverse;display:flex;}
+.orbit-dot .mood-badge{position:absolute;top:-4px;right:-4px;font-size:.55rem;}
+.orbit-empty-hint{position:absolute;top:50%;left:50%;transform:translate(-50%,26px);width:200px;text-align:center;color:var(--muted-2);font-size:.78rem;font-style:italic;font-family:var(--ff-serif);}
+
+.streak-pill{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:20px;background:var(--surface);border:1px solid var(--line);backdrop-filter:blur(16px);font-size:.8rem;color:var(--muted);margin:2px 0 4px;}
+.flashback-card{margin-top:18px;padding:16px;border-radius:18px;background:linear-gradient(120deg,var(--past-soft),transparent 70%);border:1px solid rgba(216,182,133,.35);cursor:pointer;display:flex;gap:12px;align-items:center;}
+.flashback-card .fb-emoji{font-size:1.4rem;}
+.flashback-card .fb-text{font-size:.9rem;line-height:1.4;}
+.flashback-card .fb-text b{font-family:var(--ff-serif);font-weight:500;color:var(--past);}
+
+.quick-card{margin-top:20px;padding:18px;border-radius:18px;background:var(--surface);border:1px solid var(--line);backdrop-filter:blur(16px);}
+.quick-card .qc-prompt{font-family:var(--ff-serif);font-style:italic;font-size:1.02rem;line-height:1.5;margin-bottom:12px;min-height:2.6em;}
+.qc-actions{display:flex;gap:8px;}
+.qc-actions .btn-text{padding:8px;font-size:.82rem;}
+
+.mood-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.mood-chip{display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 12px;border-radius:14px;border:1px solid var(--line);background:var(--surface);cursor:pointer;font-size:.68rem;color:var(--muted);min-width:56px;}
+.mood-chip .me{font-size:1.15rem;}
+.mood-chip.selected{border-color:var(--past);background:var(--past-soft);color:var(--past);}
+.reaction-note{margin-top:14px;text-align:center;color:var(--muted);font-size:.85rem;}
+.reaction-note .me{font-size:1.3rem;display:block;margin-bottom:4px;}
+
 .modal-back{position:fixed;inset:0;background:rgba(4,4,6,.6);backdrop-filter:blur(6px);z-index:1000;display:flex;align-items:center;justify-content:center;padding:24px;animation:enter .2s ease;}
 .modal-box{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:24px;max-width:340px;width:100%;text-align:center;}
 .modal-box p{margin:0 0 20px;font-family:var(--ff-serif);font-size:1.05rem;}
@@ -190,7 +213,6 @@ img.immersive{width:100%;border-radius:18px;display:block;}
 <div id="stage"><div id="app"></div></div>
 
 <script>
-/* ---------------- starfield background ---------------- */
 (function(){
   const cv = document.getElementById('bgcanvas');
   const ctx = cv.getContext('2d');
@@ -219,14 +241,13 @@ img.immersive{width:100%;border-radius:18px;display:block;}
   resize(); addEventListener('resize',resize); draw();
 })();
 
-/* ---------------- modal (custom confirm) ---------------- */
 function showConfirm(message, {confirmLabel='Supprimer', cancelLabel='Annuler', danger=true}={}){
   return new Promise(resolve=>{
     const back = document.createElement('div'); back.className='modal-back';
     back.innerHTML = `<div class="modal-box"><p>${message}</p>
       <div class="btn-row">
         <button class="btn btn-ghost" id="mCancel">${cancelLabel}</button>
-        <button class="btn ${danger?'btn-primary':'btn-primary'}" id="mOk" style="${danger?'background:linear-gradient(135deg,#F0A5A5,var(--danger));color:#2a0d0d':''}">${confirmLabel}</button>
+        <button class="btn btn-primary" id="mOk" style="${danger?'background:linear-gradient(135deg,#F0A5A5,var(--danger));color:#2a0d0d':''}">${confirmLabel}</button>
       </div></div>`;
     document.body.appendChild(back);
     const close = (val)=>{ back.remove(); resolve(val); };
@@ -236,7 +257,6 @@ function showConfirm(message, {confirmLabel='Supprimer', cancelLabel='Annuler', 
   });
 }
 
-/* ---------------- DB ---------------- */
 const DB_NAME='futureme_db', DB_VER=2;
 let dbp = new Promise((resolve,reject)=>{
   const req = indexedDB.open(DB_NAME, DB_VER);
@@ -258,13 +278,11 @@ function dbGet(store,id){ return tx(store,'readonly').then(s=>new Promise((res,r
 function dbDelete(store,id){ return tx(store,'readwrite').then(s=>new Promise((res,rej)=>{const r=s.delete(id);r.onsuccess=()=>res(true);r.onerror=()=>rej(r.error);})); }
 function dbGetByIndex(store,index,value){ return tx(store,'readonly').then(s=>new Promise((res,rej)=>{const r=s.index(index).get(value);r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);})); }
 
-/* capsules scoped to the signed-in account */
 async function dbAddCapsule(cap){ cap.accountId = getSession(); return dbPut('capsules',cap); }
 async function dbAllCapsules(){ const all = await dbGetAll('capsules'); const sid=getSession(); return all.filter(c=>c.accountId===sid).sort((a,b)=>new Date(b.createdAt)-new Date(a.createdAt)); }
 async function dbGetCapsule(id){ return dbGet('capsules',id); }
 async function dbDeleteCapsule(id){ return dbDelete('capsules',id); }
 
-/* ---------------- utils ---------------- */
 const uid = ()=> 'c_'+Date.now().toString(36)+Math.random().toString(36).slice(2,8);
 const $=(sel,el=document)=>el.querySelector(sel);
 const app = $('#app');
@@ -278,18 +296,68 @@ function escapeHtml(s){ const d=document.createElement('div'); d.textContent=s; 
 async function sha256(msg){ const enc=new TextEncoder().encode(msg); const buf=await crypto.subtle.digest('SHA-256',enc); return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join(''); }
 function isValidEmail(e){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); }
 
-/* ---------------- session / accounts ---------------- */
+const MOODS = [
+  {k:'joie', me:'😊', label:'Joie'}, {k:'espoir', me:'🌱', label:'Espoir'},
+  {k:'nostalgie', me:'🌙', label:'Nostalgie'}, {k:'objectif', me:'🎯', label:'Objectif'},
+  {k:'amour', me:'❤️', label:'Amour'}, {k:'doute', me:'🌫️', label:'Doute'}
+];
+function moodOf(k){ return MOODS.find(m=>m.k===k); }
+const PROMPTS = [
+  'Qu\u2019est-ce qui te fait peur en ce moment, et que dirais-tu à ton futur toi à ce sujet ?',
+  'Décris ta vie aujourd\u2019hui comme si tu la racontais à un inconnu dans 1 an.',
+  'Quelle est la chose que tu espères avoir enfin osé faire ?',
+  'Note 3 choses qui te rendent heureux en ce moment précis.',
+  'À quoi ressemble une journée parfaite pour toi, là, maintenant ?',
+  'Qu\u2019est-ce que tu aimerais te rappeler d\u2019avoir ressenti aujourd\u2019hui ?',
+  'Si tu pouvais donner un seul conseil à ton futur toi, lequel serait-ce ?',
+  'Qu\u2019est-ce que tu es en train d\u2019apprendre sur toi-même en ce moment ?'
+];
+function randomPrompt(){ return PROMPTS[Math.floor(Math.random()*PROMPTS.length)]; }
+
+function playTone(kind){
+  try{
+    const Ctx = window.AudioContext||window.webkitAudioContext; if(!Ctx) return;
+    const ctx = new Ctx();
+    const seq = kind==='lock' ? [[660,0],[440,.09]] : [[440,0],[660,.09],[880,.18]];
+    seq.forEach(([freq,delay])=>{
+      const o=ctx.createOscillator(), g=ctx.createGain();
+      o.type='sine'; o.frequency.value=freq; o.connect(g); g.connect(ctx.destination);
+      const t=ctx.currentTime+delay;
+      g.gain.setValueAtTime(0,t); g.gain.linearRampToValueAtTime(.07,t+.02); g.gain.exponentialRampToValueAtTime(.0001,t+.4);
+      o.start(t); o.stop(t+.42);
+    });
+    setTimeout(()=>ctx.close && ctx.close(), 900);
+  }catch(e){}
+}
+
+function weekKey(d){ const dt=new Date(d); const onejan=new Date(dt.getFullYear(),0,1); const wk=Math.ceil((((dt-onejan)/86400000)+onejan.getDay()+1)/7); return dt.getFullYear()+'-'+wk; }
+function computeStreak(all){
+  if(all.length===0) return 0;
+  const weeks = new Set(all.map(c=>weekKey(c.createdAt)));
+  let streak=0, cursor=new Date();
+  while(weeks.has(weekKey(cursor))){ streak++; cursor.setDate(cursor.getDate()-7); }
+  return streak;
+}
+function findFlashback(all){
+  const today = new Date();
+  for(const c of all){
+    const d = new Date(c.createdAt);
+    if(d.getMonth()===today.getMonth() && d.getDate()===today.getDate() && d.getFullYear()<today.getFullYear()){
+      return {capsule:c, years: today.getFullYear()-d.getFullYear()};
+    }
+  }
+  return null;
+}
+
 function getSession(){ return localStorage.getItem('fm_session'); }
 function setSession(id){ localStorage.setItem('fm_session', id); }
 function clearSession(){ localStorage.removeItem('fm_session'); }
 let CURRENT_ACCOUNT = null;
 
-/* ---------------- state ---------------- */
 let ONBOARDED = localStorage.getItem('fm_onboarded')==='1';
 let draft = {};
 let mediaStream=null, mediaRecorder=null, recChunks=[], recTimer=null, recSeconds=0;
 
-/* ---------------- notifications (best effort, foreground checks only) ---------------- */
 async function checkDueCapsules(){
   if(!('Notification' in window) || !getSession()) return;
   const all = await dbAllCapsules();
@@ -301,7 +369,6 @@ async function checkDueCapsules(){
   }
 }
 
-/* ---------------- router ---------------- */
 function nav(screen, params={}){
   window.scrollTo(0,0);
   stopMedia();
@@ -309,7 +376,6 @@ function nav(screen, params={}){
 }
 const RENDER = {};
 
-/* ================= ONBOARDING ================= */
 RENDER.onboarding = (params)=>{
   const step = params.step||0;
   const slides = [
@@ -334,7 +400,6 @@ RENDER.onboarding = (params)=>{
   else $('#finish').onclick = ()=>{ localStorage.setItem('fm_onboarded','1'); ONBOARDED=true; nav('authChoice'); };
 };
 
-/* ================= AUTH ================= */
 RENDER.authChoice = ()=>{
   app.innerHTML = `
   <div class="screen">
@@ -413,23 +478,48 @@ RENDER.login = ()=>{
   };
 };
 
-/* ================= HOME ================= */
+function ringForDays(n){ if(n<=30) return 'soon'; if(n<=180) return 'later'; return 'far'; }
+const RING_RADIUS = {soon:56, later:90, far:124};
+const RING_DURATION = {soon:'46s', later:'74s', far:'110s'};
+function hashAngle(id){ let h=0; for(let i=0;i<id.length;i++) h=(h*31+id.charCodeAt(i))>>>0; return h%360; }
+
 RENDER.home = async ()=>{
   await checkDueCapsules();
   const all = await dbAllCapsules();
   const locked = all.filter(c=>!c.opened).sort((a,b)=>new Date(a.unlockAt)-new Date(b.unlockAt));
   const opened = all.filter(c=>c.opened);
+  const streak = computeStreak(all);
+  const flashback = findFlashback(all);
+  const greeting = (()=>{ const h=new Date().getHours(); const n=CURRENT_ACCOUNT?.name?`, ${CURRENT_ACCOUNT.name}`:''; return (h<5||h>=18?'Bonsoir':h<12?'Bonjour':'Bon après-midi')+n; })();
+
   app.innerHTML = `
   <div class="screen">
     <div class="topbar">
-      <div></div>
+      <div class="streak-pill">${streak>0?`🔥 ${streak} semaine${streak>1?'s':''} de suite`:'✨ Commence ta série'}</div>
       <button class="iconbtn" id="toProfile">👤</button>
     </div>
     <div class="home-hero">
       <h1 class="brand">Future Me</h1>
-      <div class="tagline">Ton futur toi t\u2019attend.</div>
+      <div class="tagline">${greeting}. Ton futur toi t\u2019attend.</div>
     </div>
-    <button class="btn btn-primary" id="createBtn">+ Créer une capsule</button>
+
+    <div class="orbit-wrap"><div class="orbit-system" id="orbitSystem"></div></div>
+
+    ${flashback ? `<div class="flashback-card" id="flashbackCard">
+        <div class="fb-emoji">🕰️</div>
+        <div class="fb-text">Il y a exactement <b>${flashback.years} an${flashback.years>1?'s':''}</b>, jour pour jour, tu ${flashback.capsule.opened?'écrivais ceci':'commençais une capsule'}. ${flashback.capsule.opened?'Relis-la.':'Elle est peut-être encore verrouillée.'}</div>
+      </div>` : ''}
+
+    <button class="btn btn-primary" id="createBtn" style="margin-top:20px">+ Créer une capsule</button>
+
+    <div class="quick-card">
+      <div class="eyebrow">CAPSULE ÉCLAIR</div>
+      <div class="qc-prompt" id="qcPrompt">${randomPrompt()}</div>
+      <div class="qc-actions">
+        <button class="btn btn-ghost" id="qcShuffle" style="flex:0 0 auto;padding:10px 14px">🔀</button>
+        <button class="btn btn-primary" id="qcGo" style="flex:1">Répondre en 1 minute</button>
+      </div>
+    </div>
 
     <div class="section-title">PROCHAINES CAPSULES</div>
     <div id="lockedList">${locked.length===0?'<div class="empty">Aucune capsule en attente pour l\u2019instant.</div>':''}</div>
@@ -437,10 +527,63 @@ RENDER.home = async ()=>{
     <div class="section-title">CAPSULES OUVERTES</div>
     <div id="openList">${opened.length===0?'<div class="empty">Rien d\u2019ouvert pour le moment.</div>':''}</div>
   </div>`;
+
+  const orbit = $('#orbitSystem');
+  const groups = {soon:[], later:[], far:[]};
+  locked.forEach(c=> groups[ringForDays(Math.max(daysUntil(c.unlockAt),0))].push(c));
+  ['far','later','soon'].forEach(ringKey=>{
+    const items = groups[ringKey]; if(items.length===0) return;
+    const ringEl = document.createElement('div');
+    ringEl.className = 'orbit-ring' + (ringKey==='later'?' reverse':'');
+    ringEl.style.animationDuration = RING_DURATION[ringKey];
+    items.forEach((c,i)=>{
+      const angle = (hashAngle(c.id) + i*(360/Math.max(items.length,1))) % 360;
+      const r = RING_RADIUS[ringKey];
+      const dot = document.createElement('div');
+      dot.className='orbit-dot';
+      dot.style.transform = `rotate(${angle}deg) translate(${r}px) rotate(${-angle}deg)`;
+      dot.title = relOpen(c.unlockAt);
+      const mood = c.mood ? moodOf(c.mood) : null;
+      dot.innerHTML = `<div class="oicon" style="animation-duration:${RING_DURATION[ringKey]}">🔒</div>${mood?`<span class="mood-badge">${mood.me}</span>`:''}`;
+      dot.onclick=()=> nav('capsuleLocked',{id:c.id});
+      ringEl.appendChild(dot);
+    });
+    orbit.appendChild(ringEl);
+  });
+  if(opened.length>0){
+    const starRing = document.createElement('div');
+    starRing.className='orbit-ring';
+    starRing.style.animationDuration='150s';
+    opened.slice(0,10).forEach((c,i)=>{
+      const angle = (hashAngle(c.id)+i*37) % 360;
+      const dot=document.createElement('div');
+      dot.className='orbit-dot star';
+      dot.style.transform = `rotate(${angle}deg) translate(140px) rotate(${-angle}deg)`;
+      dot.title = capsuleLabel(c);
+      dot.innerHTML = `<div class="oicon" style="animation-duration:150s">✦</div>`;
+      dot.onclick=()=> nav('capsuleView',{id:c.id});
+      starRing.appendChild(dot);
+    });
+    orbit.appendChild(starRing);
+  }
+  const center = document.createElement('div');
+  center.className='orbit-center';
+  center.innerHTML = `<b>Toi</b>Aujourd\u2019hui`;
+  center.onclick=()=> nav('createType');
+  orbit.appendChild(center);
+  if(all.length===0){
+    const hint=document.createElement('div'); hint.className='orbit-empty-hint';
+    hint.textContent='Ton système est vide — crée ta première capsule pour le voir prendre vie.';
+    orbit.appendChild(hint);
+  }
+
+  if(flashback) $('#flashbackCard').onclick=()=> nav(flashback.capsule.opened?'capsuleView':'capsuleLocked', {id:flashback.capsule.id});
+
   const lockedList = $('#lockedList'), openList = $('#openList');
   locked.forEach(c=>{
     const row=document.createElement('div'); row.className='capsule-row';
-    row.innerHTML=`<div class="capsule-orb orb-locked">🔒</div>
+    const mood = c.mood ? moodOf(c.mood) : null;
+    row.innerHTML=`<div class="capsule-orb orb-locked" style="position:relative">🔒${mood?`<span class="mood-badge" style="top:-4px;right:-4px">${mood.me}</span>`:''}</div>
       <div class="capsule-info"><div class="capsule-title">${relOpen(c.unlockAt)}</div>
       <div class="capsule-sub">À ouvrir le ${fmtDate(c.unlockAt)}</div></div>
       <div class="chev">›</div>`;
@@ -449,7 +592,7 @@ RENDER.home = async ()=>{
   });
   opened.forEach(c=>{
     const row=document.createElement('div'); row.className='capsule-row';
-    row.innerHTML=`<div class="capsule-orb orb-open">${typeEmoji(c.type)}</div>
+    row.innerHTML=`<div class="capsule-orb orb-open">${c.reaction||typeEmoji(c.type)}</div>
       <div class="capsule-info"><div class="capsule-title">${capsuleLabel(c)}</div>
       <div class="capsule-sub">Ouverte ${relPast(c.unlockAt)}</div></div>
       <div class="chev">›</div>`;
@@ -458,11 +601,40 @@ RENDER.home = async ()=>{
   });
   $('#createBtn').onclick=()=> nav('createType');
   $('#toProfile').onclick=()=> nav('profile');
+  let curPrompt = $('#qcPrompt').textContent;
+  $('#qcShuffle').onclick=()=>{ curPrompt = randomPrompt(); $('#qcPrompt').textContent = curPrompt; };
+  $('#qcGo').onclick=()=> nav('quickCapsule', {prompt: curPrompt});
+};
+
+RENDER.quickCapsule = ({prompt})=>{
+  app.innerHTML = `
+  <div class="screen">
+    <div class="topbar"><button class="iconbtn" id="back">←</button><div></div><div></div></div>
+    <div class="eyebrow">CAPSULE ÉCLAIR</div>
+    <h1 class="serif" style="font-size:1.25rem;font-weight:400;font-style:italic">${escapeHtml(prompt)}</h1>
+    <textarea class="textcapture" id="txt" placeholder="Réponds en quelques phrases..." style="margin-top:18px"></textarea>
+    <label class="field-label">S\u2019ouvre dans</label>
+    <div class="chiprow" id="chips">
+      <div class="chip selected" data-d="365">1 an</div><div class="chip" data-d="182">6 mois</div><div class="chip" data-d="30">1 mois</div>
+    </div>
+    <div class="spacer"></div>
+    <button class="btn btn-primary" id="lock">🔒 Verrouiller</button>
+  </div>`;
+  $('#back').onclick=()=> nav('home');
+  let days=365;
+  document.querySelectorAll('.chip').forEach(c=> c.onclick=()=>{ document.querySelectorAll('.chip').forEach(x=>x.classList.remove('selected')); c.classList.add('selected'); days=parseInt(c.dataset.d); });
+  $('#lock').onclick=async ()=>{
+    const v=$('#txt').value.trim(); if(!v){ toast('Écris quelque chose d\u2019abord'); return; }
+    const d=new Date(); d.setDate(d.getDate()+days);
+    const cap = { id:uid(), type:'text', content:v, createdAt:new Date().toISOString(), unlockAt:d.toISOString(), opened:false, notified:false, question:null };
+    await dbAddCapsule(cap);
+    playTone('lock');
+    nav('locking',{date:cap.unlockAt});
+  };
 };
 function typeEmoji(t){ return {video:'🎥',audio:'🎙️',photo:'📸',text:'✍️',prediction:'🔮'}[t]||'📦'; }
 function capsuleLabel(c){ if(c.type==='prediction') return 'Prédiction'; if(c.question) return 'Une question t\u2019attend'; return 'Un message du passé'; }
 
-/* ================= CREATE: choose type ================= */
 RENDER.createType = ()=>{
   draft = { id: uid(), createdAt: new Date().toISOString() };
   app.innerHTML = `
@@ -483,7 +655,6 @@ RENDER.createType = ()=>{
   document.querySelectorAll('.type-card').forEach(el=> el.onclick=()=>{ draft.type=el.dataset.t; nav('capture'); });
 };
 
-/* ================= CAPTURE ================= */
 function stopMedia(){
   if(mediaStream){ mediaStream.getTracks().forEach(t=>t.stop()); mediaStream=null; }
   if(recTimer){ clearInterval(recTimer); recTimer=null; }
@@ -503,7 +674,9 @@ RENDER.capture = async ()=>{
 
   if(t==='text'){
     area.innerHTML = `<textarea class="textcapture" id="txt" placeholder="Cher futur moi..."></textarea>
+      <button class="btn-text" id="idea">💡 Je n\u2019ai pas d\u2019idée — suggère-moi quelque chose</button>
       <button class="btn btn-primary" id="ok" style="margin-top:6px">Continuer</button>`;
+    $('#idea').onclick=()=>{ const ta=$('#txt'); const p=randomPrompt(); ta.placeholder=p; ta.focus(); };
     $('#ok').onclick=()=>{ const v=$('#txt').value.trim(); if(!v){toast('Écris quelque chose d\u2019abord');return;} draft.content=v; nav('scheduleDate'); };
     return;
   }
@@ -580,7 +753,6 @@ function toggleRecording(kind, maxSec){
   }
 }
 
-/* ================= SCHEDULE DATE ================= */
 RENDER.scheduleDate = ()=>{
   const opts = [
     {k:'1w', label:'1 semaine', days:7}, {k:'1m', label:'1 mois', days:30},
@@ -595,13 +767,22 @@ RENDER.scheduleDate = ()=>{
       ${opts.map(o=>`<div class="chip" data-k="${o.k}" data-d="${o.days||''}">${o.label}</div>`).join('')}
     </div>
     <input type="date" id="customDate" class="hidden">
+    <label class="field-label">Comment tu te sens en écrivant ça ? (facultatif)</label>
+    <div class="mood-row" id="moods">
+      ${MOODS.map(m=>`<div class="mood-chip" data-k="${m.k}"><span class="me">${m.me}</span>${m.label}</div>`).join('')}
+    </div>
     <label class="field-label">Ajoute une question à ton futur toi (facultatif)</label>
     <input type="text" id="question" placeholder="Est-ce que tu es heureux ?">
     <div class="spacer"></div>
     <button class="btn btn-primary" id="lockBtn">Verrouiller la capsule</button>
   </div>`;
   $('#back').onclick=()=> nav('capture');
-  let chosenDate=null;
+  let chosenDate=null, chosenMood=null;
+  document.querySelectorAll('.mood-chip').forEach(m=> m.onclick=()=>{
+    const already = m.classList.contains('selected');
+    document.querySelectorAll('.mood-chip').forEach(x=>x.classList.remove('selected'));
+    if(!already){ m.classList.add('selected'); chosenMood=m.dataset.k; } else chosenMood=null;
+  });
   document.querySelectorAll('.chip').forEach(chip=>{
     chip.onclick=()=>{
       document.querySelectorAll('.chip').forEach(c=>c.classList.remove('selected'));
@@ -615,16 +796,17 @@ RENDER.scheduleDate = ()=>{
     if(!chosenDate){ toast('Choisis une date d\u2019ouverture'); return; }
     draft.unlockAt = chosenDate;
     draft.question = $('#question').value.trim() || null;
+    draft.mood = chosenMood;
     draft.opened=false; draft.notified=false;
     if(draft.content instanceof Blob || draft.content instanceof File){
       draft.content = await blobToDataURL(draft.content);
     }
     await dbAddCapsule(draft);
+    playTone('lock');
     nav('locking', {date: draft.unlockAt});
   };
 };
 
-/* ================= LOCKING ANIMATION ================= */
 RENDER.locking = (params)=>{
   app.innerHTML = `
   <div class="screen">
@@ -638,7 +820,6 @@ RENDER.locking = (params)=>{
   $('#done').onclick=()=> nav('home');
 };
 
-/* ================= LOCKED CAPSULE VIEW ================= */
 RENDER.capsuleLocked = async ({id})=>{
   const c = await dbGetCapsule(id);
   const ready = new Date(c.unlockAt) <= new Date();
@@ -660,7 +841,6 @@ RENDER.capsuleLocked = async ({id})=>{
   if(ready) $('#openNow').onclick=()=> nav('opening',{id});
 };
 
-/* ================= OPENING ANIMATION + VIEW ================= */
 RENDER.opening = async ({id})=>{
   const c = await dbGetCapsule(id);
   app.innerHTML = `<div class="screen"><div class="open-scene">
@@ -671,6 +851,7 @@ RENDER.opening = async ({id})=>{
   const burst = document.createElement('div'); burst.className='burst';
   burst.style.left='50%'; burst.style.top='50%'; burst.style.transform='translate(-50%,-50%)';
   scene.appendChild(burst);
+  playTone('unlock');
   setTimeout(async ()=>{ c.opened=true; await dbPut('capsules',c); nav('capsuleView',{id}); }, 1600);
 };
 
@@ -688,6 +869,16 @@ RENDER.capsuleView = async ({id})=>{
     <div class="eyebrow center">Écrit le ${fmtDate(c.createdAt)}</div>
     ${mediaHtml}
     ${c.question?`<div class="question-block"><div class="qlabel">TU AVAIS DEMANDÉ</div><div class="qtext">« ${escapeHtml(c.question)} »</div></div>`:''}
+    <div id="reactionZone">
+    ${c.reaction
+      ? `<div class="reaction-note"><span class="me">${c.reaction}</span>C\u2019est ce que ça t\u2019a fait ressentir.</div>`
+      : `<div class="reaction-note" style="text-align:left">
+          <div class="eyebrow" style="margin-bottom:8px">COMMENT TU TE SENS EN LISANT ÇA&nbsp;?</div>
+          <div class="mood-row" id="reactPicker">
+            ${['🥹','😊','😳','🥲','😮','❤️'].map(e=>`<div class="mood-chip" data-e="${e}" style="min-width:44px"><span class="me">${e}</span></div>`).join('')}
+          </div>
+        </div>`}
+    </div>
     <div class="spacer"></div>
     ${c.question ? `<button class="btn btn-ghost" id="answerBtn">Et maintenant ? Répondre</button>` : ''}
     <div class="btn-row" style="margin-top:10px">
@@ -703,9 +894,13 @@ RENDER.capsuleView = async ({id})=>{
   $('#homeBtn').onclick=()=> nav('home');
   $('#shareBtn').onclick=()=> nav('shareCard',{id});
   if(c.question) $('#answerBtn').onclick=()=>{ draft = { id: uid(), createdAt:new Date().toISOString(), linkedTo:id }; nav('createType'); };
+  const picker = $('#reactPicker');
+  if(picker){ picker.querySelectorAll('.mood-chip').forEach(chip=> chip.onclick=async ()=>{
+    c.reaction = chip.dataset.e; await dbPut('capsules',c);
+    nav('capsuleView',{id});
+  }); }
 };
 
-/* ================= PREDICTIONS ================= */
 const PRED_FIELDS = [
   {k:'ou', label:'Où je vivrai'}, {k:'quoi', label:'Ce que je ferai'},
   {k:'objectif', label:'Mon objectif'}, {k:'relation', label:'Une relation'},
@@ -795,7 +990,6 @@ RENDER.predictionReveal = async ({id})=>{
   };
 };
 
-/* ================= SHARE CARD ================= */
 RENDER.shareCard = async ({id})=>{
   const c = await dbGetCapsule(id);
   app.innerHTML = `
@@ -813,7 +1007,6 @@ RENDER.shareCard = async ({id})=>{
   $('#dl').onclick=()=> toast('Astuce : fais une capture d\u2019écran de la carte ci-dessus ✨');
 };
 
-/* ================= PROFILE ================= */
 RENDER.profile = async ()=>{
   const all = await dbAllCapsules();
   const locked = all.filter(c=>!c.opened), opened = all.filter(c=>c.opened);
@@ -863,7 +1056,6 @@ RENDER.profile = async ()=>{
   };
 };
 
-/* ---------------- init ---------------- */
 dbp.then(async ()=>{
   const sid = getSession();
   if(sid){
